@@ -36,10 +36,17 @@ int main(){
     cout<<"\n";
     cout<<"lower bound example "<<endl;
     vector<int> v1 = {4,2,1,9,12,12,12,12,15};
-
-    // sort(v1.begin(), v1.end());  // 1 2 4 9 12 12 12 12 15
-
-    cout << *(lower_bound(v1.begin(), v1.end(), 10)); // if 10 is present it will return 10 or else it will return the immediate next element that is greated than 10 works only for sorted  
     
+
+    sort(v1.begin(), v1.end());  // 1 2 4 9 12 12 12 12 15
+
+    cout << *(lower_bound(v1.begin(), v1.end(), 4)); // if 10 is present it will return 10 or else it will return the immediate next element that is greated than 10 works only for sorted  
+    cout<<"\n";
+    cout << *(upper_bound(v1.begin() , v1.end(),4));
+
+
+    // lower_bound(x) return first element >=x
+    //upper_bound(x) returns first element strictly >x
+
     return 0;
 }

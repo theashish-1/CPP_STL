@@ -61,6 +61,21 @@ int main() {
              << um.bucket_size(i) << " elements\n";
     }
 
+    cout<<"total size of hashmap "<<um.size()<<endl;
+    
+
+//     [Bucket 0] → (key1, val1) → (key2, val2)
+//     [Bucket 1] → (key3, val3)
+//     [Bucket 2] → empty
+//     [Bucket 3] → (key4, val4) → (key5, val5)
+
+    // | Concept          | Meaning                    |
+    // | ---------------- | -------------------------- |
+    // | `bucket_count()` | Total buckets (array size) |
+    // | `bucket_size(i)` | Elements inside bucket i   |
+    // | `size()`         | Total elements in map      |
+
+
     // 10. Load factor  , Load Factor = Total elements / Total buckets
     cout << "\nLoad factor: " << um.load_factor() << endl;
     cout << "Max load factor: " << um.max_load_factor() << endl;
